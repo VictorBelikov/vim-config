@@ -4,13 +4,14 @@ return {
     -- colorscheme = "astrodark",
     -- colorscheme = "astromars",
 
-    colorscheme = "nightfox",
+    -- colorscheme = "nightfox",
     -- colorscheme = "carbonfox",
     -- colorscheme = "terafox",
 
     -- colorscheme = "catppuccin",
     -- colorscheme = "tokyonight",
     -- colorscheme = "everforest",
+    colorscheme = "gruvbox-material",
     highlights = {
       init = { -- this table overrides highlights in all themes
         -- Normal = { bg = "#000000" },
