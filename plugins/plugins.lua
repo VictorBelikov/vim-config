@@ -68,5 +68,19 @@ return {
       vim.g.everforest_enable_italic = true
       vim.g.everforest_background = 'hard'
     end
+  },
+  {
+    "EdenEast/nightfox.nvim",
+    config = function()
+      require("nightfox").setup {
+        options = {
+          styles = {
+            comments = "italic",
+            keywords = "bold",
+            types = "bold",
+          }
+        }
+      }
+    end,
   }
 }
