@@ -13,6 +13,9 @@ return {
         GitAdd = "",
         GitChange = "",
         GitDelete = "",
+        UnixIcon = ' ', -- e712
+        DosIcon = '',  -- e70f
+        MacIcon = '',  -- e711
       },
       -- modify variables used by heirline but not defined in the setup call directly
       status = {
@@ -20,8 +23,8 @@ return {
         separators = {
           left = { "", "" },
           -- left = { "", "" },
-          -- right = { "", "" },
-          right = { " ", "" },
+          right = { "", "" },
+          -- right = { " ", "" },
           -- left_thin = { "", "" },
           right_thin = { " ", "" },
         },
@@ -39,6 +42,9 @@ return {
           hl.nav_icon_bg = get_hlgroup("String").fg
           hl.nav_fg = hl.nav_icon_bg
           hl.folder_icon_bg = get_hlgroup("Error").fg
+          -- hl.encoded_bg = get_hlgroup("Conditional").fg -- violet 
+          hl.encoded_bg = get_hlgroup("DiagnosticInfo").fg -- blue 
+          -- hl.encoded_bg= get_hlgroup("DiagnosticWarn").fg -- orange
           return hl
         end,
         attributes = {
@@ -148,7 +154,7 @@ return {
               -- function to get the current working directory name
               filename = {
                 fname = function(nr) return vim.fn.getcwd(nr) end,
-                padding = { left = 1 },
+                padding = { left = 1, right = 1 },
               },
               -- disable all other elements of the file_info component
               filetype = false,
@@ -167,17 +173,17 @@ return {
         },
         {
           status.component.builder {
-            { provider = require("astroui").get_icon "FileLine" },
+            { provider = require("astroui").get_icon "MacIcon" },
             padding = { right = 1 },
             hl = { fg = "bg" },
             surround = {
               separator = "right",
-              color = { main = "folder_icon_bg", left = "file_info_bg" },
+              color = { main = "encoded_bg", left = "file_info_bg" },
             },
           },
           status.component.builder {
             { provider = require("astroui.status").provider.file_encoding() },
-            padding = { left = 1 },
+            padding = { left = 1, right = 1 },
             file_icon = false,
             file_modified = false,
             file_read_only = false,
