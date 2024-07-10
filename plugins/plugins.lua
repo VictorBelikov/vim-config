@@ -76,7 +76,7 @@ return {
         options = {
           styles = {
             comments = "italic",
-            keywords = "bold",
+            -- keywords = "bold",
             types = "bold",
           }
         }

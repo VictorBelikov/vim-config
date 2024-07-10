@@ -69,7 +69,14 @@ return {
         -- setting a mapping to false will disable it
         -- ["<C-S>"] = false,
       },
-      v = {},
+      v = {
+        -- Save all
+        ["<leader>w"] = { ":wa<cr>", desc = "Save all" },
+        -- Select all
+        ["<C-a>"] = { "<esc>ggVG", desc = "Select All" },
+        -- Edit buffer
+        ["<leader>be"] = { ":e<cr>", desc = "Edit buffer" },
+      },
       i = {
         ["<C-a>"] = { "<esc>ggVG", desc = "Select All" },
       },

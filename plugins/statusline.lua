@@ -8,12 +8,13 @@ return {
         VimIcon = "",
         ScrollText = "",
         FileLine = "󰈙",
+        FolderEmptyIcon = " ",
         -- GitBranch = "",
         GitBranch = "",
         GitAdd = "",
         GitChange = "",
         GitDelete = "",
-        UnixIcon = ' ', -- e712
+        UnixIcon = '', -- e712
         DosIcon = '',  -- e70f
         MacIcon = '',  -- e711
       },
@@ -24,7 +25,7 @@ return {
           left = { "", "" },
           -- left = { "", "" },
           right = { "", "" },
-          -- right = { " ", "" },
+          -- right = { "", "" },
           -- left_thin = { "", "" },
           right_thin = { " ", "" },
         },
@@ -173,7 +174,7 @@ return {
         },
         {
           status.component.builder {
-            { provider = require("astroui").get_icon "MacIcon" },
+            { provider = require("astroui").get_icon "UnixIcon" },
             padding = { right = 1 },
             hl = { fg = "bg" },
             surround = {
