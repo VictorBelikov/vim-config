@@ -26,6 +26,7 @@ return {
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
         wrap = false, -- sets vim.opt.wrap
         showtabline = 0,
+        scrolloff = 7,
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
