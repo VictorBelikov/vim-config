@@ -9,9 +9,9 @@ return {
     -- colorscheme = "terafox",
 
     -- colorscheme = "catppuccin",
-    -- colorscheme = "tokyonight",
+    colorscheme = "tokyonight",
     -- colorscheme = "everforest",
-    colorscheme = "gruvbox-material",
+    -- colorscheme = "gruvbox-material",
     highlights = {
       init = { -- this table overrides highlights in all themes
         -- Normal = { bg = "#000000" },

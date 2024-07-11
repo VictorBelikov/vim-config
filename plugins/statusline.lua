@@ -10,7 +10,7 @@ return {
         FileLine = "󰈙",
         FolderEmptyIcon = " ",
         -- GitBranch = "",
-        GitBranch = "",
+        GitBranch = " ",
         GitAdd = "",
         GitChange = "",
         GitDelete = "",
@@ -23,6 +23,7 @@ return {
         -- define the separators between each section
         separators = {
           left = { "", "" },
+          left_with_space = { "", " " },
           -- left = { "", "" },
           right = { "", "" },
           -- right = { "", "" },
@@ -88,7 +89,7 @@ return {
           -- define the surrounding separator and colors to be used inside of the component
           -- and the color to the right of the separated out section
           surround = {
-            separator = "left",
+            separator = "left_with_space",
             color = { main = "blank_bg", right = "file_info_bg" },
           },
         },
