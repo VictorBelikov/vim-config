@@ -35,8 +35,11 @@ return {
       },
     },
     mappings = {
-      -- first key is the mode
       n = {
+        ["ga"] = {
+            "<cmd>BlameToggle<cr>",
+          desc = "Toggle git blame",
+        },
         -- Save all
         ["<leader>w"] = { ":wa<cr>", desc = "Save all" },
         -- Select all
@@ -45,7 +48,7 @@ return {
         ["<leader>be"] = { ":e<cr>", desc = "Edit buffer" },
          -- Jester
         -- [prefix] = { desc = "Jester" },
-        -- [prefix .. "r"] = { ":lua require'jester'.run()<cr>", desc = "Run current test (Jest)" },
+        -- ["<leader>jr"] = { ":lua require'jester'.run()<cr>", desc = "Run current test (Jest)" },
         -- [prefix .. "f"] = { ":lua require'jester'.run_file()<cr>", desc = "Run file (Jest)" },
         -- [prefix .. "d"] = { ":lua require'jester'.debug_file()<cr>", desc = "Debug file (Jest)" },
 

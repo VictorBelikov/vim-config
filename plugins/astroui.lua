@@ -4,19 +4,22 @@ return {
     -- colorscheme = "astrodark",
     -- colorscheme = "astromars",
 
+    colorscheme = "kanagawa",
+    -- colorscheme = "onedark",
+    -- colorscheme = "catppuccin",
+    -- colorscheme = "tokyonight",
+    -- colorscheme = "everforest",
+    -- colorscheme = "gruvbox-material",
+
     -- colorscheme = "nightfox",
     -- colorscheme = "carbonfox",
     -- colorscheme = "terafox",
 
-    -- colorscheme = "catppuccin",
-    colorscheme = "tokyonight",
-    -- colorscheme = "everforest",
-    -- colorscheme = "gruvbox-material",
-    highlights = {
-      init = { -- this table overrides highlights in all themes
+        highlights = {
+      init = {
         -- Normal = { bg = "#000000" },
       },
-      astrodark = { -- a table of overrides/changes when applying the astrotheme theme
+      astrodark = {
         -- Normal = { bg = "#000000" },
       },
     },

@@ -31,9 +31,20 @@ return {
       "nvim-lua/plenary.nvim",
       "nvim-treesitter/nvim-treesitter",
       "antoinemadec/FixCursorHold.nvim",
+      "marilari88/neotest-vitest",
       "haydenmeade/neotest-jest",
     },
   },
+  {},
+  -- {
+  -- https://github.com/David-Kunz/jester
+  --   "David-Kunz/jester",
+  --   config = function()
+  --     require("jester").setup {
+  --       terminal_cmd = "terminal",
+  --     }
+  --   end,
+  -- },
   {
     "catppuccin/nvim",
     name = "catppuccin",
@@ -91,6 +102,31 @@ return {
             types = "bold",
           }
         }
+      }
+    end,
+  },
+  {
+    "rebelot/kanagawa.nvim",
+    config = function()
+      require("kanagawa").setup {
+        colors = {
+          palette = {},
+          theme = { wave = {}, lotus = {}, dragon = {}, all = { ui = { bg_gutter = "none" } } },
+        },
+        background = {
+          dark = "wave",
+          -- dark = "dragon",
+          light = "lotus"
+        },
+      }
+    end,
+  },
+  {
+    "navarasu/onedark.nvim",
+    config = function()
+      require("onedark").setup {
+        style = 'darker', -- 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
+        transparent = false,  -- Show/hide background
       }
     end,
   }
